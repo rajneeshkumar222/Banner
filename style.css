@@ -1,0 +1,179 @@
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+} 
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: black;
+    gap: 15px;
+    color: white;
+    
+} 
+
+.banner p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlight {
+    color: rgb(202, 177, 36);
+    padding-top: 7px;
+    
+}
+
+.discount {
+    position: relative;
+    background-color: #f4b400;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .discount::before,
+  .discount::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 12px;
+    height: 100%;
+    background: black;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .discount::before {
+    left: -3px;
+  }
+  
+  .discount::after {
+    right: -3px;
+  }
+  
+  .discount span {
+    position: relative;
+    z-index: 2;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+.black {
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.black span {
+    color: #fff;
+}
+
+.time {
+    display: flex;
+    gap: 10px;
+}
+
+.time div {
+    background-color: red;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.time span {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+.grab {
+    background-color: #f5a623;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cross {
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+} 
+   
+@media (max-width: 768px) {
+    .banner {
+        padding: 10px 15px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .banner p {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .highlight {
+        font-size: 22px;
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    .discount {
+        padding: 8px;
+        font-size: 14px;
+        display: none;
+    }
+
+    .discount span {
+        font-size: 20px;
+    }
+
+    .black {
+        font-size: 30px;
+
+    }
+
+    .time {
+        display: none;
+    }
+
+    .cross {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 18px;
+    }
+    
+    .grab {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .cross,
+    .time
+    .discount {
+        display: none;
+    }
+}
